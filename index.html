@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Para Ti ❤️</title>
+  <title>Pa Ti ❤️</title>
   <style>
     body {
       background-color: #ffe6f0;
@@ -12,13 +12,22 @@
       height: 100vh;
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
+      flex-direction: column;
+    }
+
+    .container {
+      position: relative;
+      width: 200px;
+      height: 180px;
+      text-align: center;
     }
 
     .heart {
       position: relative;
       width: 100px;
       height: 90px;
-      margin-top: -50px;
+      margin: 0 auto;
+      animation: heartbeat 1.5s infinite;
     }
 
     .heart::before,
@@ -26,14 +35,15 @@
       content: "";
       position: absolute;
       top: 0;
-      width: 100px;
-      height: 90px;
-      background: red;
+      width: 50px;
+      height: 80px;
+      background: #ff0000;
       border-radius: 50px 50px 0 0;
+      transition: all 0.3s ease;
     }
 
     .heart::before {
-      left: 100px;
+      left: 50px;
       transform: rotate(-45deg);
       transform-origin: 0 100%;
     }
@@ -44,34 +54,47 @@
       transform-origin: 100% 100%;
     }
 
+    .heart:hover::before, 
+    .heart:hover::after {
+      background: #ff3333;
+      box-shadow: 0 0 15px #ff0000;
+    }
+
     .initial {
       position: absolute;
-      top: 40px;
-      left: 70px;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       font-size: 2rem;
       color: white;
       font-weight: bold;
-    }
-
-    .container {
-      position: relative;
-      width: 200px;
-      height: 180px;
+      z-index: 10;
+      pointer-events: none;
     }
 
     h1 {
       text-align: center;
       color: #d63384;
+      margin-top: 20px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      25% { transform: scale(1.1); }
+      50% { transform: scale(1); }
+      75% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="heart">
-      <div class="initial">D</div> <!-- Cambia la "A" por la inicial que desees -->
+      <div class="initial">D</div>
     </div>
     <h1>Te amo mutoo mi niña❤️</h1>
+    <h1>Nunca lo olvides</h1>
   </div>
 </body>
 </html>
