@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Ti ❤️</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .heart {
+      position: relative;
+      width: 100px;
+      height: 90px;
+      margin-top: -50px;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100px;
+      height: 90px;
+      background: red;
+      border-radius: 50px 50px 0 0;
+    }
+
+    .heart::before {
+      left: 100px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    .heart::after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+
+    .initial {
+      position: absolute;
+      top: 40px;
+      left: 70px;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      color: white;
+      font-weight: bold;
+    }
+
+    .container {
+      position: relative;
+      width: 200px;
+      height: 180px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d63384;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="heart">
+      <div class="initial">D</div> <!-- Cambia la "A" por la inicial que desees -->
+    </div>
+    <h1>Te amo mutoo mi niña❤️</h1>
+  </div>
+</body>
+</html>
